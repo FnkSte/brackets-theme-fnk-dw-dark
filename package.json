@@ -2,7 +2,7 @@
     "name" : "funkemedia.fnk-dark-theme",
     "title" : "Funkemedia Dark Theme",
     "description" : "A Dark Theme based on an inverted version of Dreamweavers light standard theme. Great if you are used to dreamweavers colours but a lot easier on the eye.",
-    "homepage" : "http://www.funkemedia.co.uk/downloads/brackets/fnk-dark/theme",
+    "homepage" : "https://github.com/FnkSte/brackets-theme-fnk-dw-dark",
     "version" : "1.0.0",
     "author" : "Funkemedia Ltd <steven@funkemedia.co.uk> (http://www.funkemedia.co.uk)",
     "license" : "MIT",
