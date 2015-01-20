@@ -19,3 +19,9 @@ HTML
 
 CSS
 ![Screen Shot](images/theme-css.jpg)
+
+JavaScript
+![Screen Shot](images/theme-js.jpg)
+
+PHP
+![Screen Shot](images/theme-php.jpg)
