@@ -13,3 +13,9 @@ Funkemedia Ltd
 --------------------
 
 Examples
+
+HTML
+![Screen Shot](images/theme-html.jpg)
+
+CSS
+![Screen Shot](images/theme-css.jpg)
