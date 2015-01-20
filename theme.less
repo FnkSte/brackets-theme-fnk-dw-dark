@@ -1,0 +1,397 @@
+/*
+Funkemedia Dark Theme
+Author: Funkemedia Ltd
+*/
+
+
+/*--------------------------------------------
+Define some variables used in multiple places 
+---------------------------------------------*/
+
+/*General*/
+
+@background: #1d1f21;
+@foreground: #d7d7d7;
+@text: #d7d7d7;
+@comments: #888;
+@number: #ff4676;
+
+/*CSS*/
+@css_import: #99c6ff;
+@css_media: #ff7fff;
+@css_important: #ff6c78;
+@css_property: #afd2ff;
+@css_selector: #ff8fff;
+@css_string: #b6ffb9;
+@css_value: #47c0ff;
+
+/*JS*/
+@js_bracket: #64b3ff;
+@js_client_keywords: #efa9f7;
+@js_native_keywords: #abe275;
+@js_operator: #67A5FF;
+@js_RegExp: #77e475;
+@js_reserved: #8da0ff;
+@js_string: #97d0ff;
+
+/*PHP*/
+@php_delimiter: #ff6567;
+@php_bracket: #00b1ff;
+@php_built_in_var: #5c9bff;
+@php_constants: #ebd3ba;
+@php_default_text: #D7D7D7;
+@php_function_keywords: #5C9BFF;
+@php_functions: #4FD1FF;
+@php_identifier: #D7D7D7;
+@php_number: #FF4676;
+@php_operator: #00B1FF;
+@php_reserved_keywords: #a7e37e;
+@php_string: #f43e68;
+@php_types: #8de550;
+@php_variables: #5C9BFF;
+@php_tags: #5C9BFF;
+
+/*HTML*/
+@html_anchor_tags: #66DB69;
+@html_attribute_name: #D68BFF;
+@html_attribute_val: #42b4ff;
+@html_form_tags: #FFBF5D;
+@html_image_tags: #FF5AFF;
+@html_number: #42b4ff;
+@html_object_tags: #F46162;
+@html_other_tags: #48ABE0;
+@html_script_tags: #F15A58;
+@html_special_chars: #D7D7D7;
+@html_style_tags: #F661DC;
+@html_table_tags: #81F0DA;
+@html_tags: #8B9FFF;
+@html_text: #D7D7D7;
+
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: #2f2f2f;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, 0.2);
+        color: #d7d7d7;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #767676;    
+    }
+}
+
+
+/*GENERAL STYLES*/
+.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: @text;}
+.cm-number, .cm-attribute, .cm-plus {color: @text;}
+.cm-def, .cm-property {color: @text;}
+.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @text;}
+.cm-comment {color: @comments;}
+.cm-error, .cm-minus {color: @text;}
+.cm-header {color: @text;}
+.cm-link {color: @text; text-decoration: none;}
+.cm-rangeinfo {color: @text;}
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: @text;}
+
+/* Extra CSS */
+
+.CodeMirror-searching {
+    background-color: #d3cd69;
+    &.searching-current-match {
+        background-color: #f6a644;
+    }
+}
+
+
+.CodeMirror-cursor {
+    border-left: 1px solid #c5c8c6 !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: none;
+}
+
+.CodeMirror-linenumber {
+    color: #767676;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: #333f48;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: #393939;
+}
+
+/*Bracket Highlight*/
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    background-color: #96a0d3;
+    background-color: #000; 
+    color: @comments !important;
+    border-bottom: solid 1px #2fcfff;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid #fff;
+}
+
+
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: transparent;
+        color: #767676;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: #2f2f2f;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: #000;
+            color: @comments !important;
+            border-bottom: solid 1px #2fcfff;
+            
+        }
+    }
+}
+
+/* Non-editor styling */
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @foreground;
+}
+
+
+/*--------------------------------------
+HTML MODE STYLES .cm-m-xml: HTML, XML
+--------------------------------------*/
+
+.cm-m-xml{
+    color: @text;   
+}
+
+.cm-m-xml.cm-comment{
+    color: @comments;   
+}
+
+.cm-m-xml.cm-tag{
+    color: @html_tags;
+}
+
+.cm-m-xml.cm-attribute{
+    color: @html_attribute_name;
+}
+
+.cm-m-xml.cm-string{
+    color: @html_attribute_val;
+}
+
+.cm-m-xml.cm-bracket{
+    color: #8aabcc;
+}
+
+/*--------------------------------------
+PHP MODE STYLES .cm-m-clike
+--------------------------------------*/
+
+.cm-meta, .cm-m-clike.cm-meta{
+    color: @php_delimiter;
+}
+
+.cm-m-clike{
+    color: @php_bracket;   
+}
+
+.cm-m-clike.cm-keyword{
+    color: @php_reserved_keywords;
+}
+
+.cm-m-clike.cm-builtin{
+    color: @php_function_keywords;   
+}
+
+.cm-m-clike.cm-string{
+    color: @php_string;   
+}
+
+.cm-m-clike.cm-comment{
+    color: @comments;   
+}
+
+.cm-m-clike.cm-variable-2{
+    color: @php_variables;
+}
+
+.cm-m-clike.cm-operator{
+    color: @php_operator;
+}
+
+.cm-m-clike.cm-bracket{
+    color: @php_bracket;   
+}
+
+.cm-m-clike.cm-number{
+    color: @number;
+}
+
+.cm-m-clike.cm-variable{
+    color: @text;   
+}
+
+/*--------------------------------------
+JS MODE STYLES .cm-m-javascript
+---------------------------------------*/
+
+.cm-m-javascript{
+    color: @text;
+    color: @js_reserved;
+}
+
+.cm-m-javascript.cm-operator{
+    color: @js_reserved;   
+}
+
+.cm-m-javascript.cm-comment{
+    color: @comments;   
+}
+
+.cm-m-javascript.cm-variable,
+.cm-m-javascript.cm-variable-2{
+    color: #c8c1fa;
+}
+
+.cm-m-javascript.cm-variable-3{
+    color: #fadbc1;
+}
+
+.cm-m-javascript.cm-string{
+    color: @js_string;
+}
+
+.cm-m-javascript.cm-string-2{
+    color: @js_RegExp;
+}
+
+.cm-m-javascript.cm-def{
+    color: @text;
+}
+
+.cm-m-javascript.cm-property{
+    color: @js_client_keywords;
+    color: @text;
+}
+
+.cm-m-javascript.cm-keyword{
+    color: @js_reserved;
+}
+
+.cm-m-javascript.cm-number{
+    color: @number;
+}   
+
+/*--------------------------------------
+CSS MODE STYLES .cm-m-css
+--------------------------------------*/
+
+.cm-m-css{
+    color: @css_selector;   
+}
+
+.cm-m-css.cm-atom, 
+.cm-m-css.cm-string, 
+.cm-m-css.cm-string-2,
+.cm-m-css.cm-hr {
+    color: @css_value;
+}
+
+.cm-m-css.cm-variable,
+.cm-m-css.cm-number, 
+.cm-m-css.cm-attribute, 
+.cm-m-css.cm-plus {
+    color: @css_value;
+}
+
+.cm-m-css.cm-def,
+.cm-m-css.cm-meta,
+.cm-m-css.cm-property {
+    color: @css_property;
+}
+ 
+
+.cm-m-css.cm-variable-2, 
+.cm-m-css.cm-variable-3{
+    color: #ffcffb;
+}
+
+
+.cm-m-css.cm-operator,
+.cm-m-css.cm-bracket {
+    color: @text;
+}
+
+.cm-m-css.cm-comment {
+    color: @comments;
+}
+
+.cm-m-css.cm-error,
+.cm-m-css.cm-minus {
+    color: @number;
+}
+
+.cm-m-css.cm-header {
+    color: #d85896;
+}
+
+.cm-m-css.cm-link {
+    color: #b77fdb; text-decoration: none;
+}
+
+.cm-m-css.cm-rangeinfo {
+    color: #6c71c4;
+}
+
+.cm-m-css.cm-keyword, 
+.cm-m-css.cm-qualifier, 
+.cm-m-css.cm-builtin, 
+.cm-m-css.cm-tag,
+.cm-m-css.cm-quote {
+    color: @css_selector;
+}
+
+
+
+
+
