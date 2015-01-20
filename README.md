@@ -9,3 +9,7 @@ It's easy on the eye and makes use of the different class modes so you can easil
 Enjoy
 Steven McGuinness
 Funkemedia Ltd
+
+--------------------
+
+Examples
