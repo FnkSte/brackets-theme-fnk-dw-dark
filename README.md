@@ -6,7 +6,7 @@ Great for people who are used to the colour coding from Dreamwaver, but prefer a
 
 It's easy on the eye and makes use of the different class modes so you can easily see the difference in programming languages.
 
-Enjoy
+Enjoy, 
 Steven McGuinness
 Funkemedia Ltd
 
