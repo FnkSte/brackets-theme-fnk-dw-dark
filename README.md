@@ -1,4 +1,4 @@
-# brackets-theme-fnk-dw-dark
+# Funkemedia Dark Theme
 
 Dark Theme based on Dreamweaver's colour coding by Funkemedia Ltd.
 
