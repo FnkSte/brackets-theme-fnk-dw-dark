@@ -139,8 +139,13 @@ Define some variables used in multiple places
 /*Bracket Highlight*/
 .CodeMirror-matchingbracket, .CodeMirror-matchingtag {
     background-color: #96a0d3;
-    background-color: #000;
+    background-color: rgba(0,0,0,0.1);
     border-bottom: solid 1px #2fcfff;
+}
+
+span.CodeMirror-matchingbracket {
+	color: #2fcfff !important;
+	background-color: none;	
 }
 
 .CodeMirror-overwrite .CodeMirror-cursor {
@@ -284,7 +289,7 @@ JS MODE STYLES .cm-m-javascript
 }
 
 .cm-m-javascript.cm-comment{
-    color: @comments;   
+    color: @comments;
 }
 
 .cm-m-javascript.cm-variable,
